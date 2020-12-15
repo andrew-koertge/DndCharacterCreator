@@ -1,0 +1,16 @@
+C:\Users\Drew\source\repos\DnDCharacterCreator\DndCharacterCreator.Contracts\bin\Debug\DndCharacterCreator.Contracts.dll.config
+C:\Users\Drew\source\repos\DnDCharacterCreator\DndCharacterCreator.Contracts\bin\Debug\DndCharacterCreator.Contracts.dll
+C:\Users\Drew\source\repos\DnDCharacterCreator\DndCharacterCreator.Contracts\bin\Debug\DndCharacterCreator.Contracts.pdb
+C:\Users\Drew\source\repos\DnDCharacterCreator\DndCharacterCreator.Contracts\bin\Debug\EntityFramework.dll
+C:\Users\Drew\source\repos\DnDCharacterCreator\DndCharacterCreator.Contracts\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Drew\source\repos\DnDCharacterCreator\DndCharacterCreator.Contracts\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Drew\source\repos\DnDCharacterCreator\DndCharacterCreator.Contracts\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Drew\source\repos\DnDCharacterCreator\DndCharacterCreator.Contracts\bin\Debug\EntityFramework.xml
+C:\Users\Drew\source\repos\DnDCharacterCreator\DndCharacterCreator.Contracts\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Drew\source\repos\DnDCharacterCreator\DndCharacterCreator.Contracts\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Drew\source\repos\DnDCharacterCreator\DndCharacterCreator.Contracts\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Drew\source\repos\DnDCharacterCreator\DndCharacterCreator.Contracts\obj\Debug\DndCharacterCreator.Contracts.csprojAssemblyReference.cache
+C:\Users\Drew\source\repos\DnDCharacterCreator\DndCharacterCreator.Contracts\obj\Debug\DndCharacterCreator.Contracts.csproj.CoreCompileInputs.cache
+C:\Users\Drew\source\repos\DnDCharacterCreator\DndCharacterCreator.Contracts\obj\Debug\DndCharacterCreator.Contracts.csproj.CopyComplete
+C:\Users\Drew\source\repos\DnDCharacterCreator\DndCharacterCreator.Contracts\obj\Debug\DndCharacterCreator.Contracts.dll
+C:\Users\Drew\source\repos\DnDCharacterCreator\DndCharacterCreator.Contracts\obj\Debug\DndCharacterCreator.Contracts.pdb

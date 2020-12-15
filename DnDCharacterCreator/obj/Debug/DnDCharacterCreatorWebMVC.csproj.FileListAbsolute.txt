@@ -1,0 +1,2 @@
+C:\Users\Drew\source\repos\DnDCharacterCreator\DnDCharacterCreator\obj\Debug\DnDCharacterCreatorWebMVC.csprojAssemblyReference.cache
+C:\Users\Drew\source\repos\DnDCharacterCreator\DnDCharacterCreator\obj\Debug\DnDCharacterCreatorWebMVC.csproj.CoreCompileInputs.cache
