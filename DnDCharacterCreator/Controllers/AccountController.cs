@@ -9,6 +9,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using DnDCharacterCreator.Models;
+using DnDCharacterCreator.Data;
 
 namespace DnDCharacterCreator.Controllers
 {

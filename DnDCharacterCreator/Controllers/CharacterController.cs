@@ -1,4 +1,6 @@
-﻿using DnDCharacterCreator.Models;
+﻿using DndCharacterCreator.Models;
+using DnDCharacterCreator.Data;
+using DnDCharacterCreator.Models;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -9,6 +11,7 @@ using System.Web.Mvc;
 
 namespace DnDCharacterCreator.Controllers
 {
+    [Authorize]
     public class CharacterController : Controller
     {
         private ApplicationDbContext _db = new ApplicationDbContext();
@@ -16,7 +19,8 @@ namespace DnDCharacterCreator.Controllers
         // GET: Character
         public ActionResult Index()
         {
-            return View(_db.Characters.ToList());
+            var model = new CharacterListItem[0];
+            return View(model);
         }
 
         //GET: Character/Create
@@ -28,13 +32,12 @@ namespace DnDCharacterCreator.Controllers
         //POST: Character/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(Character character)
+        public ActionResult Create(CharacterCreate character)
         {
             if (ModelState.IsValid)
             {
-                _db.Characters.Add(character);
-                _db.SaveChanges();
-                return RedirectToAction("Index");
+                
+            
             }
 
             return View(character);

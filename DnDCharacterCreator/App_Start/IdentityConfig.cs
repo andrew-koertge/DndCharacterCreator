@@ -11,6 +11,7 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security;
 using DnDCharacterCreator.Models;
+using DnDCharacterCreator.Data;
 
 namespace DnDCharacterCreator
 {
@@ -54,7 +55,7 @@ namespace DnDCharacterCreator
             manager.PasswordValidator = new PasswordValidator
             {
                 RequiredLength = 6,
-                RequireNonLetterOrDigit = true,
+                RequireNonLetterOrDigit = false,
                 RequireDigit = true,
                 RequireLowercase = true,
                 RequireUppercase = true,
