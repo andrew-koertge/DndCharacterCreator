@@ -12,10 +12,16 @@ namespace DndCharacterCreator.Models
     {
         [Display(Name="Race")]
         public Race Races { get; set; }
+
         [Display(Name="Class")]
         public Class Classes { get; set; }
+
+        [Display(Name="Alignment")]
+        public Alignment Alignments { get; set; }
+
         [Display(Name="Created")]
         public DateTimeOffset CreatedUtc { get; set; }
+
         [Display(Name="Name")]
         public string Name { get; set; }
 

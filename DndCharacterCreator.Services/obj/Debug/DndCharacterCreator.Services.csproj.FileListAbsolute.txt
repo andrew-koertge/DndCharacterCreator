@@ -14,3 +14,9 @@ C:\Users\Drew\source\repos\DnDCharacterCreator\DndCharacterCreator.Services\obj\
 C:\Users\Drew\source\repos\DnDCharacterCreator\DndCharacterCreator.Services\obj\Debug\DndCharacterCreator.Services.csproj.CopyComplete
 C:\Users\Drew\source\repos\DnDCharacterCreator\DndCharacterCreator.Services\obj\Debug\DndCharacterCreator.Services.dll
 C:\Users\Drew\source\repos\DnDCharacterCreator\DndCharacterCreator.Services\obj\Debug\DndCharacterCreator.Services.pdb
+C:\Users\Drew\source\repos\DnDCharacterCreator\DndCharacterCreator.Services\bin\Debug\DnDCharacterCreator.Data.dll
+C:\Users\Drew\source\repos\DnDCharacterCreator\DndCharacterCreator.Services\bin\Debug\DndCharacterCreator.Models.dll
+C:\Users\Drew\source\repos\DnDCharacterCreator\DndCharacterCreator.Services\bin\Debug\DnDCharacterCreator.Data.pdb
+C:\Users\Drew\source\repos\DnDCharacterCreator\DndCharacterCreator.Services\bin\Debug\DnDCharacterCreator.Data.dll.config
+C:\Users\Drew\source\repos\DnDCharacterCreator\DndCharacterCreator.Services\bin\Debug\DndCharacterCreator.Models.pdb
+C:\Users\Drew\source\repos\DnDCharacterCreator\DndCharacterCreator.Services\bin\Debug\DndCharacterCreator.Models.dll.config

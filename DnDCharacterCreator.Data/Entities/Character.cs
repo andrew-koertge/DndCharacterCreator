@@ -36,6 +36,19 @@ namespace DnDCharacterCreator.Data
         Wizard
     }
 
+    public enum Alignment
+    {
+        LawfulGood = 1,
+        LawfulNeutral,
+        LawfulEvil,
+        NeutralGood,
+        TrueNeutral,
+        NeutralEvil,
+        ChaoticGood,
+        ChaoticNeutral,
+        ChaoticEvil
+    }
+
     public class Character
     {
         [Key]
@@ -48,6 +61,8 @@ namespace DnDCharacterCreator.Data
         public Race Races { get; set; }
         
         public Class Classes { get; set; }
+
+        public Alignment Alignments { get; set; }
 
         public ICollection<Skill> Skills { get; set; }
         public int Strength { get; set; }

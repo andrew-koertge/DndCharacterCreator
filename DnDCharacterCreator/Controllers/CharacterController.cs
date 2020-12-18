@@ -1,6 +1,8 @@
 ﻿using DndCharacterCreator.Models;
+using DndCharacterCreator.Services;
 using DnDCharacterCreator.Data;
 using DnDCharacterCreator.Models;
+using Microsoft.AspNet.Identity;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -19,7 +21,10 @@ namespace DnDCharacterCreator.Controllers
         // GET: Character
         public ActionResult Index()
         {
-            var model = new CharacterListItem[0];
+            var characterId = Guid.Parse(User.Identity.GetUserId());
+            var service = new CharacterService(characterId);
+            var model = service.GetCharacter();
+
             return View(model);
         }
 
@@ -34,13 +39,17 @@ namespace DnDCharacterCreator.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(CharacterCreate character)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
-                
-            
+                return View(character);
             }
 
-            return View(character);
+            var characterId = Guid.Parse(User.Identity.GetUserId());
+            var service = new CharacterService(characterId);
+
+            service.CreateCharacter(character);
+
+            return RedirectToAction("Index");
         }
 
         //GET: Character/Delete/{id}

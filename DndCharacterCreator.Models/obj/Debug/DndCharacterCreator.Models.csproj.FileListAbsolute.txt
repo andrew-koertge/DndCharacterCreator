@@ -14,3 +14,6 @@ C:\Users\Drew\source\repos\DnDCharacterCreator\DndCharacterCreator.Models\obj\De
 C:\Users\Drew\source\repos\DnDCharacterCreator\DndCharacterCreator.Models\obj\Debug\DndCharacterCreator.Models.csproj.CopyComplete
 C:\Users\Drew\source\repos\DnDCharacterCreator\DndCharacterCreator.Models\obj\Debug\DndCharacterCreator.Models.dll
 C:\Users\Drew\source\repos\DnDCharacterCreator\DndCharacterCreator.Models\obj\Debug\DndCharacterCreator.Models.pdb
+C:\Users\Drew\source\repos\DnDCharacterCreator\DndCharacterCreator.Models\bin\Debug\DnDCharacterCreator.Data.dll
+C:\Users\Drew\source\repos\DnDCharacterCreator\DndCharacterCreator.Models\bin\Debug\DnDCharacterCreator.Data.pdb
+C:\Users\Drew\source\repos\DnDCharacterCreator\DndCharacterCreator.Models\bin\Debug\DnDCharacterCreator.Data.dll.config

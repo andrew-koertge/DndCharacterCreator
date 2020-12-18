@@ -16,6 +16,7 @@ namespace DndCharacterCreator.Models
         public string Name { get; set; }
         public Race Races { get; set; }
         public Class Classes { get; set; }
+        public Alignment Alignments { get; set; }
         public string Background { get; set; }
     }
 }

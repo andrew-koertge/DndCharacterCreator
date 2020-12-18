@@ -25,13 +25,13 @@ namespace DndCharacterCreator.Services
                     Name = model.Name,
                     Races = model.Races,
                     Classes = model.Classes,
+                    Alignments = model.Alignments,
                     CreatedUtc = DateTimeOffset.Now
                 };
             using (var ctx = new ApplicationDbContext())
             {
                 ctx.Characters.Add(entity);
                 return ctx.SaveChanges() == 1;
-
             }
         }
 
