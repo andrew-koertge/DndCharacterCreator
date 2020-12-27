@@ -63,7 +63,7 @@ namespace DnDCharacterCreator.Data
         public Class Classes { get; set; }
 
         public Alignment Alignments { get; set; }
-
+        public ICollection<Spell> Spells { get; set; }
         public ICollection<Skill> Skills { get; set; }
         public int Strength { get; set; }
         public int Dexterity { get; set; }

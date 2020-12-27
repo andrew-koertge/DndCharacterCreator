@@ -1,0 +1,90 @@
+﻿@model DndCharacterCreator.Models.CharacterDetail
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CharacterDetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Background)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Background)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedUtc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedUtc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Strength)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Strength)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Dexterity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dexterity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Constitution)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Constitution)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Wisdom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Wisdom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Intelligence)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Intelligence)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Charisma)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Charisma)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
