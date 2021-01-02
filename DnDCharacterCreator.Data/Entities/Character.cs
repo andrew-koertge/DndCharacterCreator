@@ -13,9 +13,9 @@ namespace DnDCharacterCreator.Data
         Dwarf,
         Elf,
         Gnome,
-        HalfElf,
+        Half_Elf,
         Halfling,
-        HalfOrc,
+        Half_Orc,
         Human,
         Tiefling
     }
@@ -38,15 +38,15 @@ namespace DnDCharacterCreator.Data
 
     public enum Alignment
     {
-        LawfulGood = 1,
-        LawfulNeutral,
-        LawfulEvil,
-        NeutralGood,
-        TrueNeutral,
-        NeutralEvil,
-        ChaoticGood,
-        ChaoticNeutral,
-        ChaoticEvil
+        Lawful_Good = 1,
+        Lawful_Neutral,
+        Lawful_Evil,
+        Neutral_Good,
+        True_Neutral,
+        Neutral_Evil,
+        Chaotic_Good,
+        Chaotic_Neutral,
+        Chaotic_Evil
     }
 
     public class Character

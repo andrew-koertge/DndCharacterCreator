@@ -12,6 +12,8 @@ namespace DndCharacterCreator.Services
     {
         private readonly Guid _userId;
 
+        public int[] stats = new int[] { 15, 14, 13, 12, 10, 8 };
+
         public CharacterService(Guid userId)
         {
             _userId = userId;
@@ -19,6 +21,8 @@ namespace DndCharacterCreator.Services
 
         public bool CreateCharacter(CharacterCreate model)
         {
+            
+
             var entity =
                 new Character()
                 {
@@ -26,7 +30,13 @@ namespace DndCharacterCreator.Services
                     Races = model.Races,
                     Classes = model.Classes,
                     Alignments = model.Alignments,
-                    CreatedUtc = DateTimeOffset.Now
+                    CreatedUtc = DateTimeOffset.Now,
+                    Strength = model.Strength,
+                    Dexterity = model.Dexterity,
+                    Constitution = model.Constitution,
+                    Intelligence = model.Intelligence,
+                    Wisdom = model.Wisdom,
+                    Charisma = model.Charisma
                 };
             using (var ctx = new ApplicationDbContext())
             {

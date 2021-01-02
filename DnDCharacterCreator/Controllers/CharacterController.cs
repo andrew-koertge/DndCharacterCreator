@@ -48,7 +48,6 @@ namespace DnDCharacterCreator.Controllers
             var service = new CharacterService(characterId);
 
             service.CreateCharacter(character);
-
             return RedirectToAction("Index");
         }
 
