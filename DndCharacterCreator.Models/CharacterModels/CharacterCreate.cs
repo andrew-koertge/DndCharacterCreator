@@ -1,5 +1,6 @@
 ﻿using DnDCharacterCreator.Data;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -26,7 +27,5 @@ namespace DndCharacterCreator.Models
         public int Charisma { get; set; }
 
         public int[] Stats = new int[] { 15, 14, 13, 12, 10, 8 };
-    }
-
-    
+    }    
 }

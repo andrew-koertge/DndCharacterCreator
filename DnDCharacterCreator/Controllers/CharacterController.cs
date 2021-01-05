@@ -31,6 +31,8 @@ namespace DnDCharacterCreator.Controllers
         //GET: Character/Create
         public ActionResult Create()
         {
+            int[] stats = new int[] { 15, 14, 13, 12, 10, 8 };
+            ViewBag.loadStats = stats;
             return View();
         }
 

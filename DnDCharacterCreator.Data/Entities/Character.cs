@@ -49,6 +49,7 @@ namespace DnDCharacterCreator.Data
         Chaotic_Evil
     }
 
+
     public class Character
     {
         [Key]
