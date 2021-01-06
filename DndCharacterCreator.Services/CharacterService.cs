@@ -12,8 +12,6 @@ namespace DndCharacterCreator.Services
     {
         private readonly Guid _userId;
 
-        public int[] stats = new int[] { 15, 14, 13, 12, 10, 8 };
-
         public CharacterService(Guid userId)
         {
             _userId = userId;
@@ -21,8 +19,6 @@ namespace DndCharacterCreator.Services
 
         public bool CreateCharacter(CharacterCreate model)
         {
-            
-
             var entity =
                 new Character()
                 {

@@ -1,5 +1,4 @@
-﻿@using DndCharacterCreator.Services
-@model DndCharacterCreator.Models.CharacterCreate
+﻿@model DndCharacterCreator.Models.CharacterCreate
 
 @{
     ViewBag.Title = "Create A New Character";
@@ -60,7 +59,7 @@
     <div class="form-group">
         @Html.LabelFor(model => model.Strength, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
-            @Html.DropDownListFor(model => model.Stats, new SelectList(ViewBag.loadStats, "Strength"), new { htmlAttributes = new { @class = "form-control" } })
+            @Html.DropDownListFor(model => model.Strength, new SelectList(ViewBag.loadStats, "Strength"), new { htmlAttributes = new { @class = "form-control" } })
             @Html.ValidationMessageFor(model => model.Strength, "", new { @class = "text-danger" })
         </div>
     </div>
@@ -68,7 +67,7 @@
     <div class="form-group">
         @Html.LabelFor(model => model.Dexterity, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
-            @Html.DropDownListFor(model => model.Stats, new SelectList(ViewBag.loadStats, "Dexterity"), new { htmlAttributes = new { @class = "form-control" } })
+            @Html.DropDownListFor(model => model.Dexterity, new SelectList(ViewBag.loadStats, "Dexterity"), new { htmlAttributes = new { @class = "form-control" } })
             @Html.ValidationMessageFor(model => model.Dexterity, "", new { @class = "text-danger" })
         </div>
     </div>
@@ -76,7 +75,7 @@
     <div class="form-group">
         @Html.LabelFor(model => model.Constitution, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
-            @Html.DropDownListFor(model => model.Stats, new SelectList(ViewBag.loadStats, "Constitution"), new { htmlAttributes = new { @class = "form-control" } })
+            @Html.DropDownListFor(model => model.Constitution, new SelectList(ViewBag.loadStats, "Constitution"), new { htmlAttributes = new { @class = "form-control" } })
             @Html.ValidationMessageFor(model => model.Constitution, "", new { @class = "text-danger" })
         </div>
     </div>
@@ -84,7 +83,7 @@
     <div class="form-group">
         @Html.LabelFor(model => model.Intelligence, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
-            @Html.DropDownListFor(model => model.Stats, new SelectList(ViewBag.loadStats, "Intelligence"), new { htmlAttributes = new { @class = "form-control" } })
+            @Html.DropDownListFor(model => model.Intelligence, new SelectList(ViewBag.loadStats, "Intelligence"), new { htmlAttributes = new { @class = "form-control" } })
             @Html.ValidationMessageFor(model => model.Intelligence, "", new { @class = "text-danger" })
         </div>
     </div>
@@ -92,7 +91,7 @@
     <div class="form-group">
         @Html.LabelFor(model => model.Wisdom, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
-            @Html.DropDownListFor(model => model.Stats, new SelectList(ViewBag.loadStats, "Wisdom"), new { htmlAttributes = new { @class = "form-control" } })
+            @Html.DropDownListFor(model => model.Wisdom, new SelectList(ViewBag.loadStats, "Wisdom"), new { htmlAttributes = new { @class = "form-control" } })
             @Html.ValidationMessageFor(model => model.Wisdom, "", new { @class = "text-danger" })
         </div>
     </div>
@@ -100,7 +99,7 @@
     <div class="form-group">
         @Html.LabelFor(model => model.Charisma, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
-            @Html.DropDownListFor(model => model.Stats, new SelectList(ViewBag.loadStats, "Charisma"), new { htmlAttributes = new { @class = "form-control" } })
+            @Html.DropDownListFor(model => model.Charisma, new SelectList(ViewBag.loadStats, "Charisma"), new { htmlAttributes = new { @class = "form-control" } })
             @Html.ValidationMessageFor(model => model.Charisma, "", new { @class = "text-danger" })
         </div>
     </div>
