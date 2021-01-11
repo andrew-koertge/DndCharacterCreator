@@ -22,7 +22,6 @@ namespace DndCharacterCreator.Services
             var entity =
                 new Character()
                 {
-
                     Name = model.Name,
                     Races = model.Races,
                     Classes = model.Classes,
@@ -57,10 +56,25 @@ namespace DndCharacterCreator.Services
                                 Name = e.Name,
                                 Races = e.Races,
                                 Classes = e.Classes,
-                                CreatedUtc = DateTimeOffset.Now
+                                CreatedUtc = e.CreatedUtc
                             }
                      );
                 return query.ToArray();
+            }
+        }
+
+        public bool Delete(int charId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                    .Characters
+                    .Single(e => e.CharacterId == charId && e.Id == _userId.ToString());
+
+                ctx.Characters.Remove(entity);
+
+                return ctx.SaveChanges() == 1;
             }
         }
     }

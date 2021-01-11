@@ -20,3 +20,4 @@ C:\Users\Drew\source\repos\DnDCharacterCreator\DnDCharacterCreator.Data\obj\Debu
 C:\Users\Drew\source\repos\DnDCharacterCreator\DnDCharacterCreator.Data\obj\Debug\DnDCharacterCreator.Data.Migrations.AddedSpellsToCharacterTable.resources
 C:\Users\Drew\source\repos\DnDCharacterCreator\DnDCharacterCreator.Data\obj\Debug\DnDCharacterCreator.Data.Migrations.FinalizedStats.resources
 C:\Users\Drew\source\repos\DnDCharacterCreator\DnDCharacterCreator.Data\obj\Debug\DnDCharacterCreator.Data.Migrations.FixedUserIndexError.resources
+C:\Users\Drew\source\repos\DnDCharacterCreator\DnDCharacterCreator.Data\obj\Debug\DnDCharacterCreator.Data.Migrations.FixedIndexProblems.resources

@@ -25,6 +25,7 @@ namespace DndCharacterCreator.Models
         public int Wisdom { get; set; }
         public int Intelligence { get; set; }
         public int Charisma { get; set; }
+        public DateTimeOffset CreatedUtc { get; set; }
 
         public int[] Stats = new int[] { 15, 14, 13, 12, 10, 8 };
     }    

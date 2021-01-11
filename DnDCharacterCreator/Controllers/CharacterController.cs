@@ -65,7 +65,7 @@ namespace DnDCharacterCreator.Controllers
             {
                 return HttpNotFound();
             }
-            return View(character);
+            return View();
         }
 
         //POST: Character/Delete/{id}
