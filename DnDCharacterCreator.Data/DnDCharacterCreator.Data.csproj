@@ -72,6 +72,10 @@
     <Compile Include="Migrations\202101060217124_Finalized Stats.Designer.cs">
       <DependentUpon>202101060217124_Finalized Stats.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202101090142532_Fixed User Index Error.cs" />
+    <Compile Include="Migrations\202101090142532_Fixed User Index Error.Designer.cs">
+      <DependentUpon>202101090142532_Fixed User Index Error.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Entities\Skill.cs" />
@@ -94,6 +98,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202101060217124_Finalized Stats.resx">
       <DependentUpon>202101060217124_Finalized Stats.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101090142532_Fixed User Index Error.resx">
+      <DependentUpon>202101090142532_Fixed User Index Error.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

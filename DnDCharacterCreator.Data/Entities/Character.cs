@@ -55,6 +55,7 @@ namespace DnDCharacterCreator.Data
         [Key]
         public int CharacterId { get; set; }
 
+        [Required]
         [ForeignKey(nameof(ApplicationUser))]
         public string Id { get; set; }
         public virtual ApplicationUser ApplicationUser { get; set; }

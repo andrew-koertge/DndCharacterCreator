@@ -22,6 +22,7 @@ namespace DndCharacterCreator.Services
             var entity =
                 new Character()
                 {
+
                     Name = model.Name,
                     Races = model.Races,
                     Classes = model.Classes,
