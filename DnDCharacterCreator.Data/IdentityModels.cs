@@ -47,6 +47,16 @@ namespace DnDCharacterCreator.Data
                 .Configurations
                 .Add(new IdentityUserLoginConfiguration())
                 .Add(new IdentityUserRoleConfiguration());
+
+            modelBuilder.Entity<Character>()
+                .HasMany<Spell>(s => s.Spells)
+                .WithMany(c => c.Characters)
+                .Map(cs =>
+                {
+                    cs.MapLeftKey("CharacterId");
+                    cs.MapRightKey("SpellId");
+                    cs.ToTable("CharacterSpells");
+                });
         }
     }
 

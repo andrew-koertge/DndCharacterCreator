@@ -22,6 +22,7 @@ namespace DndCharacterCreator.Services
             var entity =
                 new Character()
                 {
+                    Id = _userId.ToString(),
                     Name = model.Name,
                     Races = model.Races,
                     Classes = model.Classes,
@@ -53,12 +54,43 @@ namespace DndCharacterCreator.Services
                         e =>
                             new CharacterListItem
                             {
+                                CharacterId = e.CharacterId,
                                 Name = e.Name,
                                 Races = e.Races,
                                 Classes = e.Classes,
                                 CreatedUtc = e.CreatedUtc
                             }
                      );
+                return query.ToArray();
+            }
+        }
+
+        public IEnumerable<CharacterDetail> Details(int charId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var query =
+                    ctx
+                    .Characters
+                    .Where(e => e.CharacterId == charId && e.Id == _userId.ToString())
+                    .Select(
+                        e =>
+                        new CharacterDetail
+                        {
+                            Name = e.Name,
+                            Background = e.Background,
+                            Races = e.Races,
+                            Classes = e.Classes,
+                            Alignments = e.Alignments,
+                            CreatedUtc = e.CreatedUtc,
+                            Strength = e.Strength,
+                            Dexterity = e.Dexterity,
+                            Constitution = e.Constitution,
+                            Intelligence = e.Intelligence,
+                            Wisdom = e.Wisdom,
+                            Charisma = e.Charisma
+                        }
+                    );
                 return query.ToArray();
             }
         }

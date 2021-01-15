@@ -49,7 +49,6 @@ namespace DnDCharacterCreator.Data
         Chaotic_Evil
     }
 
-
     public class Character
     {
         [Key]
@@ -78,5 +77,10 @@ namespace DnDCharacterCreator.Data
         public string Background { get; set; }
         public ICollection<Trait> Traits { get; set; }
         public DateTimeOffset CreatedUtc { get; set; }
+
+        public Character()
+        {
+            this.Spells = new HashSet<Spell>();
+        }
     }
 }

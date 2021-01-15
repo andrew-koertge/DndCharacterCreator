@@ -47,8 +47,8 @@
         @Html.DisplayFor(modelItem => item.Alignments)
     </td>
     <td>
-        @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-        @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        @Html.ActionLink("Details", "Details", new { id=item.CharacterId }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.CharacterId })
     </td>
 </tr>
 }

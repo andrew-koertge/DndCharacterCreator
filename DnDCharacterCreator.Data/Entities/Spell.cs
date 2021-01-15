@@ -11,11 +11,6 @@ namespace DnDCharacterCreator.Data
     {
         [Key]
         public int SpellId { get; set; }
-
-        [ForeignKey(nameof(Character))]
-        public int CharacterId { get; set; }
-        public virtual Character Character { get; set; }
-
         public int Level { get; set; }
         public string SpellName { get; set; }
         public DateTime CastTime { get; set; }
@@ -23,5 +18,11 @@ namespace DnDCharacterCreator.Data
         public int Range { get; set; }
         public string DamageType { get; set; }
 
+        public Spell()
+        {
+            this.Characters = new HashSet<Character>();
+        }
+
+        public virtual ICollection<Character> Characters { get; set; }
     }
 }

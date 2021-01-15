@@ -10,6 +10,8 @@ namespace DndCharacterCreator.Models
 {
     public class CharacterListItem
     {
+        [Required]
+        public int CharacterId { get; set; }
         public Race Races { get; set; }
 
         public Class Classes { get; set; }
