@@ -49,6 +49,23 @@ namespace DnDCharacterCreator.Data
         Chaotic_Evil
     }
 
+    public enum Background
+    {
+        Acolyte = 1,
+        Charlatan,
+        Criminal,
+        Entertainer,
+        Folk_Hero,
+        Guild_Artisan,
+        Hermit,
+        Noble,
+        Outlander,
+        Sage,
+        Sailor,
+        Soldier,
+        Urchin
+    }
+
     public class Character
     {
         [Key]
@@ -74,7 +91,7 @@ namespace DnDCharacterCreator.Data
         public int Charisma { get; set; }
 
         public string Name { get; set; }
-        public string Background { get; set; }
+        public Background Backgrounds { get; set; }
         public ICollection<Trait> Traits { get; set; }
         public DateTimeOffset CreatedUtc { get; set; }
 

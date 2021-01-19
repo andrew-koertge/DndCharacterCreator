@@ -13,12 +13,12 @@ namespace DndCharacterCreator.Models
     {
         [Required]
         [MinLength(2, ErrorMessage ="Name must be at least 2 characters long.")]
-        [MaxLength(25, ErrorMessage ="Name must be shorter than 25 characters.")]
+        [MaxLength(50, ErrorMessage ="Name must be shorter than 50 characters.")]
         public string Name { get; set; }
         public Race Races { get; set; }
         public Class Classes { get; set; }
         public Alignment Alignments { get; set; }
-        public string Background { get; set; }
+        public Background Backgrounds { get; set; }
         public int Strength { get; set; }
         public int Dexterity { get; set; }
         public int Constitution { get; set; }

@@ -10,7 +10,7 @@ namespace DndCharacterCreator.Models
     public class CharacterDetail
     {
         public string Name { get; set; }
-        public string Background { get; set; }
+        public Background Backgrounds { get; set; }
         public Race Races { get; set; }
         public Class Classes { get; set; }
         public Alignment Alignments { get; set; }

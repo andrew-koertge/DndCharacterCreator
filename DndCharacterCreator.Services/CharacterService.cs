@@ -78,7 +78,7 @@ namespace DndCharacterCreator.Services
                         new CharacterDetail
                         {
                             Name = e.Name,
-                            Background = e.Background,
+                            Backgrounds = e.Backgrounds,
                             Races = e.Races,
                             Classes = e.Classes,
                             Alignments = e.Alignments,
