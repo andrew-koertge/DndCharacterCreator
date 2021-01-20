@@ -1,4 +1,5 @@
 ﻿using DndCharacterCreator.Models;
+using DndCharacterCreator.Models.CharacterModels;
 using DndCharacterCreator.Services;
 using DnDCharacterCreator.Data;
 using DnDCharacterCreator.Models;
@@ -16,8 +17,7 @@ namespace DnDCharacterCreator.Controllers
     [Authorize]
     public class CharacterController : Controller
     {
-        private ApplicationDbContext _db = new ApplicationDbContext();
-
+        
         // GET: Character
         public ActionResult Index()
         {
@@ -53,45 +53,33 @@ namespace DnDCharacterCreator.Controllers
             return RedirectToAction("Index");
         }
 
-        //GET: Character/Delete/{id}
-        public ActionResult Delete(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Character character = _db.Characters.Find(id);
-            if (character == null)
-            {
-                return HttpNotFound();
-            }
-            return View();
-        }
+        ////GET: Character/Delete/{id}
+        //public ActionResult Delete(int id)
+        //{
+          
+        //    var service = new CharacterService(id);
+            
+        //    service.Delete(id);
+        //}
 
         //POST: Character/Delete/{id}
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult Delete(int id)
         {
-            Character character = _db.Characters.Find(id);
-            _db.Characters.Remove(character);
-            _db.SaveChanges();
+            var characterId = Guid.Parse(User.Identity.GetUserId());
+            var service = new CharacterService(characterId);
+            service.Delete(id);
             return RedirectToAction("Index");
         }
 
         //GET: Character/Edit/{id}
         public ActionResult Edit(int? id)
         {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Character character = _db.Characters.Find(id);
-            if (character == null)
-            {
-                return HttpNotFound();
-            }
-            return View(character);
+            var characterId = Guid.Parse(User.Identity.GetUserId());
+            var service = new CharacterService(characterId);
+            var model = service.Edit((int)id);
+            return View(model);
         }
 
         //POST: Character/Edit/{id}
@@ -99,28 +87,23 @@ namespace DnDCharacterCreator.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit(Character character)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
-                _db.Entry(character).State = EntityState.Modified;
-                _db.SaveChanges();
-                return RedirectToAction("Index");
+                return View(character);
             }
-            return View(character);
+
+            var characterId = Guid.Parse(User.Identity.GetUserId());
+            var service = new CharacterService(characterId);
+            service.Edit(character);
+            return RedirectToAction("Index");
         }
 
         //GET: Character/Details/{id}
         public ActionResult Details(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Character character = _db.Characters.Find(id);
-            if (character == null)
-            {
-                return HttpNotFound();
-            }
-            return View(character);
+        {var characterId = Guid.Parse(User.Identity.GetUserId());
+            var service = new CharacterService(characterId);
+            var model = service.Details((int)id);
+            return View(model);
         }
     }
 }

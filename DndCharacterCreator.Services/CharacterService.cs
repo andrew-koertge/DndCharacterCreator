@@ -1,10 +1,12 @@
 ﻿using DndCharacterCreator.Models;
+using DndCharacterCreator.Models.CharacterModels;
 using DnDCharacterCreator.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 
 namespace DndCharacterCreator.Services
 {
@@ -94,6 +96,19 @@ namespace DndCharacterCreator.Services
                 return query.ToArray();
             }
         }
+
+        public IEnumerable<CharacterEdit> Edit(int charId)
+        {
+             using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                    .Characters
+                    .Single(e => e.CharacterId == charId && e.Id == _userId.ToString());
+
+
+            }
+        } 
 
         public bool Delete(int charId)
         {
