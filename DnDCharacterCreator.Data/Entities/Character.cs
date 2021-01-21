@@ -98,6 +98,7 @@ namespace DnDCharacterCreator.Data
         public Character()
         {
             this.Spells = new HashSet<Spell>();
+            this.Skills = new HashSet<Skill>();
         }
     }
 }

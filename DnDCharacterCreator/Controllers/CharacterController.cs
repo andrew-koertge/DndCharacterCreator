@@ -100,7 +100,8 @@ namespace DnDCharacterCreator.Controllers
 
         //GET: Character/Details/{id}
         public ActionResult Details(int? id)
-        {var characterId = Guid.Parse(User.Identity.GetUserId());
+        {
+            var characterId = Guid.Parse(User.Identity.GetUserId());
             var service = new CharacterService(characterId);
             var model = service.Details((int)id);
             return View(model);

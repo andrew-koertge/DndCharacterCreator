@@ -59,6 +59,14 @@
     <Compile Include="CharacterModels\CharacterEdit.cs" />
     <Compile Include="CharacterModels\CharacterListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SkillModels\SkillCreate.cs" />
+    <Compile Include="SkillModels\SkillDetail.cs" />
+    <Compile Include="SkillModels\SkillEdit.cs" />
+    <Compile Include="SkillModels\SkillListItem.cs" />
+    <Compile Include="SpellModels\SpellCreate.cs" />
+    <Compile Include="SpellModels\SpellDetail.cs" />
+    <Compile Include="SpellModels\SpellEdit.cs" />
+    <Compile Include="SpellModels\SpellListItem.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -70,5 +78,6 @@
       <Name>DnDCharacterCreator.Data</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

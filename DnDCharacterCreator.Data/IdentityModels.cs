@@ -57,6 +57,16 @@ namespace DnDCharacterCreator.Data
                     cs.MapRightKey("SpellId");
                     cs.ToTable("CharacterSpells");
                 });
+
+            modelBuilder.Entity<Character>()
+                .HasMany<Skill>(s => s.Skills)
+                .WithMany(c => c.Characters)
+                .Map(cs =>
+                {
+                    cs.MapLeftKey("CharacterId");
+                    cs.MapRightKey("SkillId");
+                    cs.ToTable("CharacterSkills");
+                });
         }
     }
 

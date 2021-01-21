@@ -2,22 +2,17 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
-using System.Web;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace DnDCharacterCreator.Data
+namespace DndCharacterCreator.Models.SkillModels
 {
-    public class Skill
+    public class SkillListItem
     {
-        [Key]
+        [Required]
         public int SkillId { get; set; }
         public string SkillName { get; set; }
         public int SkillThreshold { get; set; }
         public string GovAttribute { get; set; }
-
-        public Skill()
-        {
-            this.Characters = new HashSet<Character>();
-        }
-        public virtual ICollection<Character> Characters { get; set; }
     }
 }
