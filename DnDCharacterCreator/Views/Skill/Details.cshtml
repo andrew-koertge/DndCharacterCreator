@@ -1,0 +1,50 @@
+﻿@model DndCharacterCreator.Models.SkillModels.SkillDetail
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>SkillDetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SkillId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SkillId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SkillName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SkillName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SkillThreshold)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SkillThreshold)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GovAttribute)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GovAttribute)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

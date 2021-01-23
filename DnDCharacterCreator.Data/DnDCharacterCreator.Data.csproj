@@ -88,6 +88,10 @@
     <Compile Include="Migrations\202101192309185_Changed background to enum.Designer.cs">
       <DependentUpon>202101192309185_Changed background to enum.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202101232059076_Updated Spells with more information.cs" />
+    <Compile Include="Migrations\202101232059076_Updated Spells with more information.Designer.cs">
+      <DependentUpon>202101232059076_Updated Spells with more information.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Entities\Skill.cs" />
@@ -122,6 +126,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202101192309185_Changed background to enum.resx">
       <DependentUpon>202101192309185_Changed background to enum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101232059076_Updated Spells with more information.resx">
+      <DependentUpon>202101232059076_Updated Spells with more information.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

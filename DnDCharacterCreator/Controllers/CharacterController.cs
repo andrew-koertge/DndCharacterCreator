@@ -74,27 +74,24 @@ namespace DnDCharacterCreator.Controllers
         }
 
         //GET: Character/Edit/{id}
-        public ActionResult Edit(int? id)
+        public ActionResult Edit()
         {
-            var characterId = Guid.Parse(User.Identity.GetUserId());
-            var service = new CharacterService(characterId);
-            var model = service.Edit((int)id);
-            return View(model);
+            return View();
         }
 
         //POST: Character/Edit/{id}
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(Character character)
+        public ActionResult Edit(int? id)
         {
             if (!ModelState.IsValid)
             {
-                return View(character);
+                return View(id);
             }
 
             var characterId = Guid.Parse(User.Identity.GetUserId());
             var service = new CharacterService(characterId);
-            service.Edit(character);
+            service.Edit((int)id);
             return RedirectToAction("Index");
         }
 

@@ -242,11 +242,19 @@
     <Content Include="Views\Character\Details.cshtml" />
     <Content Include="Views\Character\Delete.cshtml" />
     <Content Include="Views\Character\Edit.cshtml" />
+    <Content Include="Views\Skill\Index.cshtml" />
+    <Content Include="Views\Skill\Create.cshtml" />
+    <Content Include="Views\Skill\Details.cshtml" />
+    <Content Include="Views\Skill\Edit.cshtml" />
+    <Content Include="Views\Skill\Delete.cshtml" />
+    <Content Include="Views\Spell\Index.cshtml" />
+    <Content Include="Views\Spell\Create.cshtml" />
+    <Content Include="Views\Spell\Details.cshtml" />
+    <Content Include="Views\Spell\Edit.cshtml" />
+    <Content Include="Views\Spell\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Skill\" />
-    <Folder Include="Views\Spell\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

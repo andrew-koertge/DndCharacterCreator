@@ -101,12 +101,20 @@ namespace DndCharacterCreator.Services
         {
              using (var ctx = new ApplicationDbContext())
             {
-                var entity =
+                var query =
                     ctx
                     .Characters
-                    .Single(e => e.CharacterId == charId && e.Id == _userId.ToString());
-
-                
+                    .Where(e => e.CharacterId == charId && e.Id == _userId.ToString())
+                    .Select(
+                        e =>
+                        new CharacterEdit
+                        {
+                            Alignments = e.Alignments,
+                            Skills = e.Skills,
+                            Spells = e.Spells
+                        }
+                    );
+                return query.ToArray();
             }
         } 
 
