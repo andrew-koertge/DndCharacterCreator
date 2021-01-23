@@ -1,4 +1,7 @@
-﻿using DndCharacterCreator.Models.SpellModels;
+﻿using DndCharacterCreator.Models.SkillModels;
+using DndCharacterCreator.Models.SpellModels;
+using DndCharacterCreator.Services;
+using Microsoft.AspNet.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,55 +16,71 @@ namespace DnDCharacterCreator.Controllers
         // GET: Skill
         public ActionResult Index()
         {
-            return View();
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new SkillService(userId);
+            var model = service.GetSkills();
+
+            return View(model);
         }
 
         //GET: Spell/Create
         public ActionResult Create()
         {
-
+            return View();
         }
 
         //POST: Spell/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(SpellCreate spell)
+        public ActionResult Create(SkillCreate skill)
         {
+            if (!ModelState.IsValid)
+            {
+                return View(skill);
+            }
 
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new SkillService(userId);
+
+            service.CreateSkill(skill);
+            return RedirectToAction("Index");
         }
 
         //GET: Spell/Details/{id}
-        public ActionResult Details()
+        public ActionResult Details(int? id)
         {
-
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new SkillService(userId);
+            var model = service.Details((int)id);
+            return View(model);
         }
 
         //GET: Spell/Edit/{id}
         public ActionResult Edit()
         {
-
+            return View();
         }
 
         //POST: Spell/Edit/{id}
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit()
+        public ActionResult Edit(int? id)
         {
-
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new SkillService(userId);
+            var model = service.Edit((int)id);
+            return View(model);
         }
         
-        //GET: Spell/Delete/{id}
-        public ActionResult Delete()
-        {
-
-        }
-
         //POST: Spell/Delete/{id}
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete()
+        public ActionResult Delete(int id)
         {
-
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new SkillService(userId);
+            service.Delete(id);
+            return RedirectToAction("Index");
         }
     }
 }

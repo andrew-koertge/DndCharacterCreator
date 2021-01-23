@@ -106,7 +106,7 @@ namespace DndCharacterCreator.Services
                     .Characters
                     .Single(e => e.CharacterId == charId && e.Id == _userId.ToString());
 
-
+                
             }
         } 
 

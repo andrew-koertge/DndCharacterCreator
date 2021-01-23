@@ -11,9 +11,12 @@ namespace DndCharacterCreator.Models.SpellModels
         public int SpellId { get; set; }
         public int Level { get; set; }
         public string SpellName { get; set; }
-        public DateTime CastTime { get; set; }
-        public DateTime CastDuration { get; set; }
+        public string CastTime { get; set; }
+        public string CastDuration { get; set; }
         public int Range { get; set; }
         public string DamageType { get; set; }
+        public string School { get; set; }
+        public string Components { get; set; }
+        public string Damage { get; set; }
     }
 }

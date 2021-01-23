@@ -56,7 +56,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CharacterService.cs" />
+    <Compile Include="MathService.cs" />
+    <Compile Include="SkillService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SpellService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
