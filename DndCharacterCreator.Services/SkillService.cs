@@ -23,7 +23,6 @@ namespace DndCharacterCreator.Services
                 new Skill()
                 {
                     SkillName = model.SkillName,
-                    SkillThreshold = model.SkillThreshold,
                     GovAttribute = model.GovAttribute
                 };
             using (var ctx = new ApplicationDbContext())
@@ -45,7 +44,6 @@ namespace DndCharacterCreator.Services
                         {
                             SkillId = e.SkillId,
                             SkillName = e.SkillName,
-                            SkillThreshold = e.SkillThreshold,
                             GovAttribute = e.GovAttribute
                         }
                         );
@@ -67,7 +65,6 @@ namespace DndCharacterCreator.Services
                       {
                           SkillId = e.SkillId,
                           SkillName = e.SkillName,
-                          SkillThreshold = e.SkillThreshold,
                           GovAttribute = e.GovAttribute
                       }
                     );

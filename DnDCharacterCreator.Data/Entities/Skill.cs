@@ -11,8 +11,8 @@ namespace DnDCharacterCreator.Data
         [Key]
         public int SkillId { get; set; }
         public string SkillName { get; set; }
-        public int SkillThreshold { get; set; }
         public string GovAttribute { get; set; }
+        public bool Selected { get; set; }
 
         public Skill()
         {

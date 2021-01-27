@@ -33,6 +33,11 @@ namespace DnDCharacterCreator.Controllers
         {
             int[] stats = new int[] { 15, 14, 13, 12, 10, 8 };
             ViewBag.loadStats = stats;
+
+            var characterId = Guid.Parse(User.Identity.GetUserId());
+            var service = new CharacterService(characterId);
+            
+            //service.CreateSkills();
             return View();
         }
 
@@ -48,22 +53,18 @@ namespace DnDCharacterCreator.Controllers
 
             var characterId = Guid.Parse(User.Identity.GetUserId());
             var service = new CharacterService(characterId);
-
             service.CreateCharacter(character);
             return RedirectToAction("Index");
         }
 
-        ////GET: Character/Delete/{id}
-        //public ActionResult Delete(int id)
-        //{
-          
-        //    var service = new CharacterService(id);
-            
-        //    service.Delete(id);
-        //}
+        //GET: Character/Delete/{id}
+        public ActionResult Delete()
+        {
+            return View();           
+        }
 
         //POST: Character/Delete/{id}
-        [HttpPost, ActionName("Delete")]
+        [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Delete(int id)
         {
@@ -96,11 +97,11 @@ namespace DnDCharacterCreator.Controllers
         }
 
         //GET: Character/Details/{id}
-        public ActionResult Details(int? id)
+        public ActionResult Details(int id)
         {
             var characterId = Guid.Parse(User.Identity.GetUserId());
             var service = new CharacterService(characterId);
-            var model = service.Details((int)id);
+            var model = service.Details(id);
             return View(model);
         }
     }

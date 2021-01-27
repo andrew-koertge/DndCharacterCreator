@@ -20,6 +20,7 @@ namespace DnDCharacterCreator.Data
         public string School { get; set; }
         public string Components { get; set; }
         public string Damage { get; set; }
+        public bool Selected { get; set; }
 
         public Spell()
         {

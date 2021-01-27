@@ -104,6 +104,22 @@
         </div>
     </div>
 
+    @*<div class="form-group">
+        @Html.LabelFor(model => model.SelectedSkills, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DropDownListFor(model => model.SelectedSkills, Model.SkillsList, new { htmlAttributes = new { @class = "form-control", multiple = "multiple" } })
+            @Html.ValidationMessageFor(model => model.SelectedSkills, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.SelectedSpells, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DropDownListFor(model => model.SelectedSpells, Model.SkillsList, new { htmlAttributes = new { @class = "form-control", multiple = "multiple" } })
+            @Html.ValidationMessageFor(model => model.SelectedSpells, "", new { @class = "text-danger" })
+        </div>
+    </div>*@
+
     <div class="form-group">
         <div class="col-md-offset-2 col-md-10">
             <input type="submit" value="Create" class="btn btn-default" />

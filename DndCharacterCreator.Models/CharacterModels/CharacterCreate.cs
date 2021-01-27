@@ -6,6 +6,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.Mvc;
 
 namespace DndCharacterCreator.Models
 {
@@ -26,7 +27,21 @@ namespace DndCharacterCreator.Models
         public int Intelligence { get; set; }
         public int Charisma { get; set; }
         public DateTimeOffset CreatedUtc { get; set; }
+        //public MultiSelectList SpellsList { get; set; }
+        //public MultiSelectList SkillsList { get; set; }
+        public int StrengthModifier { get; set; }
+        public int DexterityModifier { get; set; }
+        public int ConstitutionModifier { get; set; }
+        public int IntelligenceModifier { get; set; }
+        public int WisdomModifier { get; set; }
+        public int CharismaModifier { get; set; }
+
+        public string[] ClassProficiency { get; set; }
+        public string[] BackgroundProficiency { get; set; }
 
         public int[] Stats = new int[] { 15, 14, 13, 12, 10, 8 };
+
+        //public int[] SelectedSkills { get; set; }
+        //public int[] SelectedSpells { get; set; }
     }    
 }

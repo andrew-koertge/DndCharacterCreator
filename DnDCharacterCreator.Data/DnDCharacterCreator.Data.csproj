@@ -55,6 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entities\Character.cs" />
+    <Compile Include="Entities\ClassProficiency.cs" />
     <Compile Include="IdentityModels.cs" />
     <Compile Include="Migrations\202012160030214_Initial Migration.cs" />
     <Compile Include="Migrations\202012160030214_Initial Migration.Designer.cs">
@@ -92,11 +93,18 @@
     <Compile Include="Migrations\202101232059076_Updated Spells with more information.Designer.cs">
       <DependentUpon>202101232059076_Updated Spells with more information.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202101240154175_Added Many-To-Many Relationship to Character.cs" />
+    <Compile Include="Migrations\202101240154175_Added Many-To-Many Relationship to Character.Designer.cs">
+      <DependentUpon>202101240154175_Added Many-To-Many Relationship to Character.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101262310556_Updated db to add new entity.cs" />
+    <Compile Include="Migrations\202101262310556_Updated db to add new entity.Designer.cs">
+      <DependentUpon>202101262310556_Updated db to add new entity.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Entities\Skill.cs" />
     <Compile Include="Entities\Spell.cs" />
-    <Compile Include="Entities\Trait.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -129,6 +137,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202101232059076_Updated Spells with more information.resx">
       <DependentUpon>202101232059076_Updated Spells with more information.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101240154175_Added Many-To-Many Relationship to Character.resx">
+      <DependentUpon>202101240154175_Added Many-To-Many Relationship to Character.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101262310556_Updated db to add new entity.resx">
+      <DependentUpon>202101262310556_Updated db to add new entity.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -29,7 +29,6 @@ namespace DnDCharacterCreator.Data
 
         public DbSet<Character> Characters { get; set; }
         public DbSet<Spell> Spells { get; set; }
-        public DbSet<Trait> Traits { get; set; }
         public DbSet<Skill> Skills { get; set; }
 
         public static ApplicationDbContext Create()

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DnDCharacterCreator.Data.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -52,18 +53,11 @@ namespace DnDCharacterCreator.Data
     public enum Background
     {
         Acolyte = 1,
-        Charlatan,
         Criminal,
-        Entertainer,
         Folk_Hero,
-        Guild_Artisan,
-        Hermit,
         Noble,
-        Outlander,
         Sage,
-        Sailor,
         Soldier,
-        Urchin
     }
 
     public class Character
@@ -77,12 +71,14 @@ namespace DnDCharacterCreator.Data
         public virtual ApplicationUser ApplicationUser { get; set; }
 
         public Race Races { get; set; }
-        
         public Class Classes { get; set; }
-
+        public Background Backgrounds { get; set; }
         public Alignment Alignments { get; set; }
-        public ICollection<Spell> Spells { get; set; }
-        public ICollection<Skill> Skills { get; set; }
+
+        public virtual ICollection<Spell> Spells { get; set; }
+        public virtual ICollection<Skill> Skills { get; set; }
+        public virtual ICollection<ClassProficiency> ClassProficiencies { get; set; }
+
         public int Strength { get; set; }
         public int Dexterity { get; set; }
         public int Constitution { get; set; }
@@ -90,15 +86,22 @@ namespace DnDCharacterCreator.Data
         public int Intelligence { get; set; }
         public int Charisma { get; set; }
 
+        public int StrengthModifier { get; set; }
+        public int DexterityModifier { get; set; }
+        public int ConstitutionModifier { get; set; }
+        public int IntelligenceModifier { get; set; }
+        public int WisdomModifier { get; set; }
+        public int CharismaModifier { get; set; }
+
         public string Name { get; set; }
-        public Background Backgrounds { get; set; }
-        public ICollection<Trait> Traits { get; set; }
+       
         public DateTimeOffset CreatedUtc { get; set; }
 
         public Character()
         {
             this.Spells = new HashSet<Spell>();
             this.Skills = new HashSet<Skill>();
+            this.ClassProficiencies = new HashSet<ClassProficiency>();
         }
     }
 }

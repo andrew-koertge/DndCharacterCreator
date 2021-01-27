@@ -24,3 +24,5 @@ C:\Users\Drew\source\repos\DnDCharacterCreator\DnDCharacterCreator.Data\obj\Debu
 C:\Users\Drew\source\repos\DnDCharacterCreator\DnDCharacterCreator.Data\obj\Debug\DnDCharacterCreator.Data.Migrations.Addedmanytomanyrelationshipbetweencharandspell.resources
 C:\Users\Drew\source\repos\DnDCharacterCreator\DnDCharacterCreator.Data\obj\Debug\DnDCharacterCreator.Data.Migrations.Changedbackgroundtoenum.resources
 C:\Users\Drew\source\repos\DnDCharacterCreator\DnDCharacterCreator.Data\obj\Debug\DnDCharacterCreator.Data.Migrations.UpdatedSpellswithmoreinformation.resources
+C:\Users\Drew\source\repos\DnDCharacterCreator\DnDCharacterCreator.Data\obj\Debug\DnDCharacterCreator.Data.Migrations.AddedManyToManyRelationshiptoCharacter.resources
+C:\Users\Drew\source\repos\DnDCharacterCreator\DnDCharacterCreator.Data\obj\Debug\DnDCharacterCreator.Data.Migrations.Updateddbtoaddnewentity.resources
