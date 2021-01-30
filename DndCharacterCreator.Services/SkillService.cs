@@ -51,24 +51,23 @@ namespace DndCharacterCreator.Services
             }
         }
 
-        public IEnumerable<SkillDetail> Details(int id)
+        public SkillDetail Details(int id)
         {
             using (var ctx = new ApplicationDbContext())
             {
-                var query =
+                var entity =
                     ctx
                     .Skills
-                    .Where(e => e.SkillId == id)
-                    .Select(
-                      e =>
-                      new SkillDetail
-                      {
-                          SkillId = e.SkillId,
-                          SkillName = e.SkillName,
-                          GovAttribute = e.GovAttribute
-                      }
-                    );
-                return query.ToArray();
+                     .Single(e => e.SkillId == id);
+
+                return
+                  new SkillDetail
+                  {
+                      SkillId = entity.SkillId,
+                      SkillName = entity.SkillName,
+                      GovAttribute = entity.GovAttribute
+                  };
+                    
             }
         }
 

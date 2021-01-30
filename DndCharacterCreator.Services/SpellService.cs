@@ -61,31 +61,29 @@ namespace DndCharacterCreator.Services
             }
         }
 
-        public IEnumerable<SpellDetail> Details(int id)
+        public SpellDetail Details(int id)
         {
             using (var ctx = new ApplicationDbContext())
             {
-                var query =
+                var entity =
                     ctx
                     .Spells
-                    .Where(e => e.SpellId == id)
-                    .Select(
-                      e =>
-                      new SpellDetail
-                      {
-                          SpellId = e.SpellId,
-                          Level = e.Level,
-                          SpellName = e.SpellName,
-                          CastTime = e.CastTime,
-                          CastDuration = e.CastDuration,
-                          Range = e.Range,
-                          DamageType = e.DamageType,
-                          School = e.School,
-                          Components = e.Components,
-                          Damage = e.Damage
-                      }
-                    );
-                return query.ToArray();
+                    .Single(e => e.SpellId == id);
+
+                return
+                    new SpellDetail
+                    {
+                        SpellId = entity.SpellId,
+                        Level = entity.Level,
+                        SpellName = entity.SpellName,
+                        CastTime = entity.CastTime,
+                        CastDuration = entity.CastDuration,
+                        Range = entity.Range,
+                        DamageType = entity.DamageType,
+                        School = entity.School,
+                        Components = entity.Components,
+                        Damage = entity.Damage
+                    };      
             }
         }
 
@@ -103,7 +101,7 @@ namespace DndCharacterCreator.Services
             }
         }
 
-        public IEnumerable<SpellEdit> Edit(int? id)
+        public IEnumerable<SpellEdit> Edit(int id)
         {
             using (var ctx = new ApplicationDbContext())
             {

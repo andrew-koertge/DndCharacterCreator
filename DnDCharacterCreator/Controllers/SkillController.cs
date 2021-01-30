@@ -47,11 +47,11 @@ namespace DnDCharacterCreator.Controllers
         }
 
         //GET: Spell/Details/{id}
-        public ActionResult Details(int? id)
+        public ActionResult Details(int id)
         {
             var userId = Guid.Parse(User.Identity.GetUserId());
             var service = new SkillService(userId);
-            var model = service.Details((int)id);
+            var model = service.Details(id);
             return View(model);
         }
 
@@ -64,11 +64,11 @@ namespace DnDCharacterCreator.Controllers
         //POST: Spell/Edit/{id}
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int? id)
+        public ActionResult Edit(int id)
         {
             var userId = Guid.Parse(User.Identity.GetUserId());
             var service = new SkillService(userId);
-            var model = service.Edit((int)id);
+            var model = service.Edit(id);
             return View(model);
         }
         
