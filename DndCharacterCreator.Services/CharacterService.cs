@@ -16,9 +16,161 @@ namespace DndCharacterCreator.Services
 
         private ApplicationDbContext _db = new ApplicationDbContext();
 
+        public CharacterCreate Character { get; }
+
         public CharacterService(Guid userId)
         {
             _userId = userId;
+        }
+
+        public CharacterService(Character character)
+        {
+            
+        }
+
+        public CharacterService(CharacterCreate character)
+        {
+            Character = character;
+        }
+
+        public void CalculateModifiers(CharacterCreate character)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                switch (character.Strength)
+                {
+                    case 15:
+                        character.StrengthModifier = 2;
+                        break;
+                    case 14:
+                        character.StrengthModifier = 2;
+                        break;
+                    case 13:
+                        character.StrengthModifier = 1;
+                        break;
+                    case 12:
+                        character.StrengthModifier = 1;
+                        break;
+                    case 10:
+                        character.StrengthModifier = 0;
+                        break;
+                    case 8:
+                        character.StrengthModifier = -1;
+                        break;
+                }
+
+                switch (character.Dexterity)
+                {
+                    case 15:
+                        character.DexterityModifier = 2;
+                        break;
+                    case 14:
+                        character.DexterityModifier = 2;
+                        break;
+                    case 13:
+                        character.DexterityModifier = 1;
+                        break;
+                    case 12:
+                        character.DexterityModifier = 1;
+                        break;
+                    case 10:
+                        character.DexterityModifier = 0;
+                        break;
+                    case 8:
+                        character.DexterityModifier = -1;
+                        break;
+                }
+
+                switch (character.Constitution)
+                {
+                    case 15:
+                        character.ConstitutionModifier = 2;
+                        break;
+                    case 14:
+                        character.ConstitutionModifier = 2;
+                        break;
+                    case 13:
+                        character.ConstitutionModifier = 1;
+                        break;
+                    case 12:
+                        character.ConstitutionModifier = 1;
+                        break;
+                    case 10:
+                        character.ConstitutionModifier = 0;
+                        break;
+                    case 8:
+                        character.ConstitutionModifier = -1;
+                        break;
+                }
+
+                switch (character.Intelligence)
+                {
+                    case 15:
+                        character.IntelligenceModifier = 2;
+                        break;
+                    case 14:
+                        character.IntelligenceModifier = 2;
+                        break;
+                    case 13:
+                        character.IntelligenceModifier = 1;
+                        break;
+                    case 12:
+                        character.IntelligenceModifier = 1;
+                        break;
+                    case 10:
+                        character.IntelligenceModifier = 0;
+                        break;
+                    case 8:
+                        character.IntelligenceModifier = -1;
+                        break;
+                }
+
+                switch (character.Wisdom)
+                {
+                    case 15:
+                        character.WisdomModifier = 2;
+                        break;
+                    case 14:
+                        character.WisdomModifier = 2;
+                        break;
+                    case 13:
+                        character.WisdomModifier = 1;
+                        break;
+                    case 12:
+                        character.WisdomModifier = 1;
+                        break;
+                    case 10:
+                        character.WisdomModifier = 0;
+                        break;
+                    case 8:
+                        character.WisdomModifier = -1;
+                        break;
+                }
+
+                switch (character.Charisma)
+                {
+                    case 15:
+                        character.CharismaModifier = 2;
+                        break;
+                    case 14:
+                        character.CharismaModifier = 2;
+                        break;
+                    case 13:
+                        character.CharismaModifier = 1;
+                        break;
+                    case 12:
+                        character.CharismaModifier = 1;
+                        break;
+                    case 10:
+                        character.CharismaModifier = 0;
+                        break;
+                    case 8:
+                        character.CharismaModifier = -1;
+                        break;
+                }
+
+                ctx.SaveChanges();
+            }
         }
 
         public bool CreateCharacter(CharacterCreate model)
@@ -44,145 +196,6 @@ namespace DndCharacterCreator.Services
             {
                 ctx.Characters.Add(entity);
                 return ctx.SaveChanges() == 1;
-            }
-        }
-
-        public void CalculateModifiers(Character character)
-        {
-            using (var ctx = new ApplicationDbContext()) { 
-                switch (character.Strength)
-            {
-                case 15:
-                    character.StrengthModifier = 2;
-                    break;
-                case 14:
-                    character.StrengthModifier = 2;
-                    break;
-                case 13:
-                    character.StrengthModifier = 1;
-                    break;
-                case 12:
-                    character.StrengthModifier = 1;
-                    break;
-                case 10:
-                    character.StrengthModifier = 0;
-                    break;
-                case 8:
-                    character.StrengthModifier = -1;
-                    break;
-            }
-
-                switch (character.Dexterity)
-            {
-                case 15:
-                    character.DexterityModifier = 2;
-                    break;
-                case 14:
-                    character.DexterityModifier = 2;
-                    break;
-                case 13:
-                    character.DexterityModifier = 1;
-                    break;
-                case 12:
-                    character.DexterityModifier = 1;
-                    break;
-                case 10:
-                    character.DexterityModifier = 0;
-                    break;
-                case 8:
-                    character.DexterityModifier = -1;
-                    break;
-            }
-
-                switch (character.Constitution)
-            {
-                case 15:
-                    character.ConstitutionModifier = 2;
-                    break;
-                case 14:
-                    character.ConstitutionModifier = 2;
-                    break;
-                case 13:
-                    character.ConstitutionModifier = 1;
-                    break;
-                case 12:
-                    character.ConstitutionModifier = 1;
-                    break;
-                case 10:
-                    character.ConstitutionModifier = 0;
-                    break;
-                case 8:
-                    character.ConstitutionModifier = -1;
-                    break;
-            }
-
-                switch (character.Intelligence)
-            {
-                case 15:
-                    character.IntelligenceModifier = 2;
-                    break;
-                case 14:
-                    character.IntelligenceModifier = 2;
-                    break;
-                case 13:
-                    character.IntelligenceModifier = 1;
-                    break;
-                case 12:
-                    character.IntelligenceModifier = 1;
-                    break;
-                case 10:
-                    character.IntelligenceModifier = 0;
-                    break;
-                case 8:
-                    character.IntelligenceModifier = -1;
-                    break;
-            }
-
-                switch (character.Wisdom)
-            {
-                case 15:
-                    character.WisdomModifier = 2;
-                    break;
-                case 14:
-                    character.WisdomModifier = 2;
-                    break;
-                case 13:
-                    character.WisdomModifier = 1;
-                    break;
-                case 12:
-                    character.WisdomModifier = 1;
-                    break;
-                case 10:
-                    character.WisdomModifier = 0;
-                    break;
-                case 8:
-                    character.WisdomModifier = -1;
-                    break;
-            }
-
-                switch (character.Charisma)
-                {
-                    case 15:
-                        character.CharismaModifier = 2;
-                        break;
-                    case 14:
-                        character.CharismaModifier = 2;
-                        break;
-                    case 13:
-                        character.CharismaModifier = 1;
-                        break;
-                    case 12:
-                        character.CharismaModifier = 1;
-                        break;
-                    case 10:
-                        character.CharismaModifier = 0;
-                        break;
-                    case 8:
-                        character.CharismaModifier = -1;
-                        break;
-            }
-                
-                ctx.SaveChanges();
             }
         }
 

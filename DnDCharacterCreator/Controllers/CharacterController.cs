@@ -37,7 +37,9 @@ namespace DnDCharacterCreator.Controllers
             var characterId = Guid.Parse(User.Identity.GetUserId());
             var service = new CharacterService(characterId);
             
-            //service.CreateSkills();
+            service.GetCharacter();
+            
+            
             return View();
         }
 
@@ -54,6 +56,9 @@ namespace DnDCharacterCreator.Controllers
             var characterId = Guid.Parse(User.Identity.GetUserId());
             var service = new CharacterService(characterId);
             service.CreateCharacter(character);
+
+            var modCalc = new CharacterService(character);
+            modCalc.CalculateModifiers(character);
             return RedirectToAction("Index");
         }
 
